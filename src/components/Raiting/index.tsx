@@ -16,7 +16,9 @@ export const Rating: FC = () => {
   }, [rating]);
 
   const handleClick = () => {
-    setSubmit(rating);
+    setSubmit(currentValue => {
+      return currentValue + rating
+    });
   };
 
   console.log('rating', rating);
