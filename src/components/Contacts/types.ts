@@ -1,4 +1,3 @@
-// ?? StyledProps ??
-export interface StyledProps {
+export interface Props {
   value?: number;
 }
