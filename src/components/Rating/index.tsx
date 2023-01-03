@@ -26,7 +26,11 @@ export const Rating: FC = () => {
           star = index += 1;
 
           const handleClick = () => {
-            setRating(index);
+            if (rating === null) {
+              setRating(index);
+            } else if (rating === index) {
+              setRating(null);
+            }
           }
 
           return (
