@@ -1,10 +1,21 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Rating } from './components/Raiting';
+import FeedbackPage from './pages/FeedbackPage';
+import RatingPage from './pages/RatingPage';
+
+import { HeroWrapper } from './components/Rating/styled';
 
 function App() {
   return (
     <div className="App">
-      <Rating />
+      <HeroWrapper>
+        <Router>
+          <Routes>
+            <Route path='/' element={<RatingPage />} />
+            <Route path='/feedback' element={<FeedbackPage />} />
+          </Routes>
+        </Router>
+      </HeroWrapper>
     </div>
   );
 }
